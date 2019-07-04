@@ -1,0 +1,314 @@
+*{
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+li {
+    list-style: none;
+}
+
+.clear {
+    clear: both;
+    display: block;
+    content: '';
+}
+
+.vender {
+    width: 840px;
+    height: 520px;
+    border: 1px solid #ccc;
+    margin: 100px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 10px #f0f0f0;
+    padding: 10px;
+    position: relative;
+
+    .title {
+        text-align: center;
+        font-size: 40px;
+        padding: 10px 0;
+    }
+
+    .product-list {
+        width: 500px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        float: left;
+
+        .product-item {
+            width: 150px;
+            height: 200px;
+            border: 1px solid gray;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 6px 4px black;
+            position: relative;
+            background: white;
+            display: table-cell;
+
+            .drink-img {
+                width: 40px;
+                height: 130px;
+                margin: 0 auto;
+                position: relative;
+                vertical-align: bottom;
+
+                img {
+                    width: 40px;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    margin-left: -20px;
+                }
+            }
+
+            .drink-name {
+                text-align: center;
+                font-size: 20px;
+            }
+
+            .drink-price-nums {
+                margin: 0 auto;
+                width: 100px;
+                font-size: 12px;
+
+                .drink-price {
+                    margin-right: 10px;
+                    font-size: 16px;
+                    color: red;
+                }
+
+                .drink-nums {
+                    font-size: 16px;
+                    color: red;
+                }
+
+            }
+
+            .clickBtn {
+                width: 80px;
+                height: 30px;
+                border: 1px solid black;
+                border-radius: 20px;
+                position: absolute;
+                left: 35px;
+                bottom: -10px;
+                cursor: pointer;
+
+            }
+
+            .clickBtn:focus {
+                outline: none;
+            }
+
+            .buy-it {
+                background: orange;
+
+            }
+
+            .sell-out {
+                background: #ccc;
+
+            }
+
+        }
+    }
+
+    .buy-info {
+        width: 300px;
+        height: 420px;
+        border: 2px solid black;
+        border-radius: 10px;
+        float: right;
+        padding: 10px;
+        box-sizing: border-box;
+
+        .before-buy {
+            // display: none;
+            .buy-prompt {
+                font-size: 20px;
+            }
+
+            .prompt {
+                font-size: 14px;
+                color: orange;
+                font-weight: bold;
+            }
+
+            .alreadyselect {
+                .selectnone {
+                    padding: 10px 0;
+                    text-align: center;
+
+                    // display: none;
+                    .no-select {
+                        padding: 20px 0;
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                }
+
+                .selectcontent {
+                    display: none;
+
+                    .yourselect {
+                        padding: 15px 0;
+
+                        .selectprice {
+                            color: blue;
+                        }
+
+                        .nums-btn {
+                            display: inline-block;
+                            width: 20px;
+                            height: 20px;
+                            border: 1px solid black;
+                            text-align: center;
+                            line-height: 20px;
+                            border-radius: 50%;
+                            cursor: pointer;
+                        }
+
+                        #num {
+                            padding: 0 10px;
+                        }
+                    }
+
+                    .selectname {
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: bold;
+                        padding-bottom: 10px;
+                    }
+
+                }
+
+                .payway {
+                    .paywaysblock {
+                        padding: 20px 0;
+                        display: flex;
+                        box-sizing: border-box;
+                        justify-content: space-between;
+
+                        .ways {
+                            width: 80px;
+                            height: 80px;
+                            border-radius: 20px;
+                            background: pink;
+                            cursor: pointer;
+
+                        }
+
+                        .cash {
+                            text-align: center;
+                            line-height: 80px;
+                            font-weight: bold;
+                        }
+
+                        .alipay {
+                            background-size: cover;
+                            background-image: url('../images/alipay.jpg')
+                        }
+                        
+                        .wechat {
+                            background-size: cover;
+                            background-image: url('../images/wecode.jpg');
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+    }
+    .buying{
+        display:none;
+        .paytome{
+            padding:10px 0;
+        }
+        .payimg{
+            width:280px;
+            height:280px;
+            padding:10px; 
+            display:none;
+            .paycode{
+                width:260px;
+                height:260px;
+                display: block;
+                
+            }
+        }
+      
+        .paycashblock{
+            display: none;
+            .paybtnlist{
+                display: flex;
+                justify-content: space-between;
+                .paybtn{
+                    width:80px;
+                    height: 40px;
+                    background: #ccc;
+                    text-align: center;
+                    line-height: 40px;
+                    border:1px solid black;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    .money{
+                        pointer-events: none;
+                    }
+                }
+            }
+            .hascash{
+                padding: 10px 0;
+            }
+            .waiting{
+                display:none;
+                text-align: center;
+                font-size: 20px;
+                padding:20px 0;
+            }
+
+        }
+      
+    }
+
+    .alert-mask {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+        transition: all .2s;
+
+        .alert {
+            width: 200px;
+            height: 120px;
+            border: 1px solid #ccc;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -60px 0 0 -100px;
+            z-index: 10;
+            box-shadow: 0 0 2px 2px #ccc;
+            background: white;
+            border-radius: 20px;
+
+            .alert-content {
+                // height: 120px;
+                text-align: center;
+                line-height: 120px;
+            }
+
+            // .alert-confirm{
+            //     text-align: center;
+            //     border-top: 2px solid #ccc;
+            //     line-height: 30px;
+            // }
+        }
+    }
+
+}
